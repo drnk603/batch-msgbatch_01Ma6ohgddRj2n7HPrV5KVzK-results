@@ -1,4 +1,64 @@
 <!DOCTYPE html><html lang="en"><head>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://domain.com/#org",
+      "name": "domain",
+      "url": "https://domain.com",
+      "email": "service@domain.com",
+      "telephone": "+44 20 0737402",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "One Canada Square, Canary Wharf, Floor 12, Office 1603, E14 5AB London"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "email": "service@domain.com",
+        "telephone": "+44 20 0737402"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://domain.com/#website",
+      "url": "https://domain.com",
+      "name": "domain",
+      "publisher": {
+        "@id": "https://domain.com/#org"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://domain.com#webpage",
+      "url": "https://domain.com",
+      "name": "domain — Premium Lingerie Store",
+      "isPartOf": {
+        "@id": "https://domain.com/#website"
+      },
+      "about": {
+        "@id": "https://domain.com/#org"
+      },
+      "inLanguage": "en",
+      "description": "domain is your premier destination for luxury lingerie. Discover our curated collection of bras, panties, bodysuits, and sleepwear crafted for elegance and comfort."
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://domain.com#breadcrumbs",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://domain.com"
+        }
+      ]
+    }
+  ]
+}
+</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>domain — Premium Lingerie Store</title>
@@ -13,25 +73,34 @@
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
- </head>
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+<link rel="stylesheet" href="./header-footer.css">
+<link rel="stylesheet" href="./consent.css">
+<script src="./consent.js"></script>
+</head>
  <body>
-  <header class="l-header navbar navbar-expand-md sticky-top bg-white border-bottom" role="banner">
-   <div class="container">
-    <a class="navbar-brand c-logo" href="/" aria-label="LaceLux Home"> <span class="c-logo__text">LaceLux</span> </a>
-    <button class="navbar-toggler c-nav__toggle" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-    <div class="collapse navbar-collapse" id="mainNav">
-     <nav class="ms-auto" role="navigation" aria-label="Main navigation">
-      <ul class="navbar-nav align-items-md-center gap-md-2">
-       <li class="nav-item"><a class="nav-link c-nav__item is-active" href="/" aria-current="page">Home</a></li>
-       <li class="nav-item"><a class="nav-link c-nav__item" href="about.html">About</a></li>
-       <li class="nav-item"><a class="nav-link c-nav__item" href="services.html">Collections</a></li>
-       <li class="nav-item"><a class="nav-link c-nav__item" href="contact.html">Contact</a></li>
-       <li class="nav-item ms-md-3"><a class="btn c-button c-button--primary" href="contact.html">Shop Now</a></li>
+<header class="dr-header" data-dr-variant="v1">
+  <div class="dr-header-inner">
+    <a class="dr-logo" href="./index.html" aria-label="domain">domain</a>
+
+    <nav class="dr-nav" aria-label="Primary navigation">
+      <ul class="dr-nav-list">
+        <li class="dr-nav-item"><a class="dr-nav-link" href="./index.html">Home</a></li><li class="dr-nav-item"><a class="dr-nav-link" href="./about.html">About</a></li><li class="dr-nav-item"><a class="dr-nav-link" href="./contact.html">Contact</a></li><li class="dr-nav-item"><a class="dr-nav-link" href="./services.html">Services</a></li>
       </ul>
-     </nav>
-    </div>
-   </div>
-  </header>
+    </nav>
+
+    <button class="dr-burger" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="dr-mobile-menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<nav class="dr-mobile-menu" id="dr-mobile-menu" aria-label="Mobile navigation">
+  <ul class="dr-mobile-nav-list">
+    <li class="dr-nav-item"><a class="dr-nav-link" href="./index.html">Home</a></li><li class="dr-nav-item"><a class="dr-nav-link" href="./about.html">About</a></li><li class="dr-nav-item"><a class="dr-nav-link" href="./contact.html">Contact</a></li><li class="dr-nav-item"><a class="dr-nav-link" href="./services.html">Services</a></li>
+  </ul>
+</nav>
+
   <main id="main-content">
    <section class="c-hero py-5 py-md-0" id="hero" aria-labelledby="hero-heading">
     <div class="container">
@@ -309,16 +378,59 @@
           </svg>
          </div>
          <p class="c-testimonial-card__text flex-grow-1">"The quality of the lace bralette I ordered is absolutely stunning. Soft, supportive, and the packaging made it feel like a luxury gift."</p>
-         <footer class="c-testimonial-card__author mt-3">
-          <div class="d-flex align-items-center gap-3">
-           <div class="c-avatar ratio ratio-1x1">
-            <img src="img/14083.jpg" alt="Portrait of Anna, satisfied domain customer" class="img-fluid object-fit-cover c-avatar__image" width="60" height="60" loading="lazy">
-           </div>
-           <div>
-            <strong class="c-testimonial-card__name d-block">Anna V.</strong> <span class="c-testimonial-card__location">Moscow</span>
-           </div>
-          </div>
-         </footer>
+         <footer class="dr-footer" aria-label="Site footer">
+  <div class="dr-footer-inner">
+    <div class="dr-footer-top">
+      <div class="dr-footer-brand-block">
+        <div class="dr-footer-logo" aria-label="domain">domain</div>
+        <p class="dr-footer-tagline">Thoughtfully crafted experiences for the modern web.</p>
+      </div>
+      <nav class="dr-footer-nav" aria-label="Main navigation">
+        <h2 class="dr-footer-heading">Explore</h2>
+        <ul class="dr-footer-nav-list">
+          <li class="dr-footer-nav-item"><a class="dr-footer-nav-link" href="./index.html">Home</a></li>
+          <li class="dr-footer-nav-item"><a class="dr-footer-nav-link" href="./about.html">About</a></li>
+          <li class="dr-footer-nav-item"><a class="dr-footer-nav-link" href="./contact.html">Contact</a></li>
+          <li class="dr-footer-nav-item"><a class="dr-footer-nav-link" href="./services.html">Services</a></li>
+        </ul>
+      </nav>
+      <nav class="dr-footer-legal" aria-label="Legal links">
+        <h2 class="dr-footer-heading">Legal</h2>
+        <ul class="dr-footer-legal-list">
+          <li class="dr-footer-legal-item"><a class="dr-footer-legal-link" href="./privacy.html">Privacy Policy</a></li>
+          <li class="dr-footer-legal-item"><a class="dr-footer-legal-link" href="./terms_of_services.html">Terms of Service</a></li>
+          <li class="dr-footer-legal-item"><a class="dr-footer-legal-link" href="./terms_and_conditions.html">Terms and Conditions</a></li>
+          <li class="dr-footer-legal-item"><a class="dr-footer-legal-link" href="./cookie_policy.html">Cookie Policy</a></li>
+          <li class="dr-footer-legal-item"><a class="dr-footer-legal-link" href="./gdpr-rights.html">GDPR Rights</a></li>
+          <li class="dr-footer-legal-item"><a class="dr-footer-legal-link" href="./impressum.html">Impressum</a></li>
+        </ul>
+      </nav>
+      <div class="dr-footer-contact" aria-label="Contact information">
+        <h2 class="dr-footer-heading">Contact</h2>
+        <ul class="dr-footer-contact-list">
+          <li class="dr-footer-contact-item">
+            <span class="dr-footer-contact-label">Address</span>
+            <span class="dr-footer-contact-value">One Canada Square, Canary Wharf, Floor 12, Office 1603, E14 5AB London</span>
+          </li>
+          <li class="dr-footer-contact-item">
+            <span class="dr-footer-contact-label">Telephone</span>
+            <a class="dr-footer-contact-link" href="tel:+44 20 0737402">+44 20 0737402</a>
+          </li>
+          <li class="dr-footer-contact-item">
+            <span class="dr-footer-contact-label">Email</span>
+            <a class="dr-footer-contact-link" href="mailto:service@domain.com">service@domain.com</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="dr-footer-bottom">
+      <p class="dr-footer-disclaimer">The information provided on domain and domain.com is for general informational purposes only and does not constitute professional, legal, or financial advice. All content is provided as-is without any warranties.</p>
+      <div class="dr-footer-bottom-meta">
+        <p class="dr-footer-meta"><span class="dr-year"></span> © domain. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</footer>
         </div>
        </blockquote>
       </div>
@@ -420,7 +532,7 @@
            <div class="invalid-feedback">Please enter your full name.</div>
           </div>
           <div class="mb-3">
-           <label for="nl-email" class="form-label">Email Address <span aria-hidden="true">*</span></label> <input type="email" class="form-control" id="nl-email" name="email" placeholder="info@domain.com" required="" autocomplete="email" aria-required="true">
+           <label for="nl-email" class="form-label">Email Address <span aria-hidden="true">*</span></label> <input type="email" class="form-control" id="nl-email" name="email" placeholder="service@domain.com" required="" autocomplete="email" aria-required="true">
            <div class="invalid-feedback">Please enter a valid email address.</div>
           </div>
           <div class="mb-4">
@@ -448,6 +560,18 @@
     </div>
    </div>
   </footer>
-  <script src="script.js" defer=""></script>
+  
  
+  
+  
+
+<script src="script.js" defer=""></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+if (typeof AOS !== "undefined" && !window.__AOS_INITIALIZED__) {
+  AOS.init({ once: true, duration: 700, easing: "ease-out-cubic" });
+  window.__AOS_INITIALIZED__ = true;
+}
+</script>
+<script src="./header-footer.js"></script>
 </body></html>

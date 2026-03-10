@@ -171,7 +171,7 @@
     var pathname = global.location.pathname;
     var isHome = pathname === '/' ||
       pathname === '/index.html' ||
-      pathname.replace(//+$/, '') === '';
+      pathname.replace(/\/+$/, '') === '';
 
     var anchors = document.querySelectorAll('a[href^="#"]');
 
@@ -210,7 +210,7 @@
     var pathname = global.location.pathname;
 
     function normPath(p) {
-      return p.replace(//index.html$/, '/').replace(//$/, '') || '/';
+      return p.replace(/\/index.html$/, '/').replace(/\/$/, '') || '/';
     }
 
     var currentPath = normPath(pathname);
@@ -393,11 +393,11 @@
   }
 
   function validateEmail(value) {
-    return /^[^s@]+@[^s@]+.[^s@]+$/.test(value);
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
   }
 
   function validatePhone(value) {
-    return /^[-ds+()]{7,20}$/.test(value);
+    return /^[\d\s+()\-]{7,20}$/.test(value);
   }
 
   function blockHoneypot(form) {

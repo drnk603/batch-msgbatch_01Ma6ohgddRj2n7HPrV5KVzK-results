@@ -812,7 +812,6 @@ section {
 .c-card {
   display: flex;
   flex-direction: column;
-  height: 100%;
   background: linear-gradient(160deg, #ffffff 0%, #fdf8fa 100%);
   border: 1px solid var(--color-border);
   border-radius: var(--border-radius-lg);

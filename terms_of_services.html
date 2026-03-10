@@ -1,4 +1,77 @@
 <!DOCTYPE html><html lang="en"><head>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://domain.com/#org",
+      "name": "domain",
+      "url": "https://domain.com",
+      "email": "service@domain.com",
+      "telephone": "+44 20 0737402",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "One Canada Square, Canary Wharf, Floor 12, Office 1603, E14 5AB London"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "email": "service@domain.com",
+        "telephone": "+44 20 0737402"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://domain.com/#website",
+      "url": "https://domain.com",
+      "name": "domain",
+      "publisher": {
+        "@id": "https://domain.com/#org"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://domain.com/terms_of_services.html#webpage",
+      "url": "https://domain.com/terms_of_services.html",
+      "name": "Terms of Service | domain – Lingerie Boutique",
+      "isPartOf": {
+        "@id": "https://domain.com/#website"
+      },
+      "about": {
+        "@id": "https://domain.com/#org"
+      },
+      "inLanguage": "en",
+      "description": "Read domain",
+      "mainEntity": {
+        "@type": "Service",
+        "name": "Terms of Service | domain – Lingerie Boutique",
+        "provider": {
+          "@id": "https://domain.com/#org"
+        }
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://domain.com/terms_of_services.html#breadcrumbs",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://domain.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Terms Of Services.Html",
+          "item": "https://domain.com/terms_of_services.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Terms of Service | domain – Lingerie Boutique</title>
@@ -13,25 +86,34 @@
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
- </head>
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+<link rel="stylesheet" href="./header-footer.css">
+<link rel="stylesheet" href="./consent.css">
+<script src="./consent.js"></script>
+</head>
  <body>
-  <header class="l-header navbar navbar-expand-md sticky-top bg-white border-bottom" role="banner">
-   <div class="container">
-    <a class="navbar-brand c-logo" href="/" aria-label="LaceLux Home"> <span class="c-logo__text">LaceLux</span> </a>
-    <button class="navbar-toggler c-nav__toggle" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-    <div class="collapse navbar-collapse" id="mainNav">
-     <nav class="ms-auto" role="navigation" aria-label="Main navigation">
-      <ul class="navbar-nav align-items-md-center gap-md-2">
-       <li class="nav-item"><a class="nav-link c-nav__item is-active" href="/" aria-current="page">Home</a></li>
-       <li class="nav-item"><a class="nav-link c-nav__item" href="about.html">About</a></li>
-       <li class="nav-item"><a class="nav-link c-nav__item" href="services.html">Collections</a></li>
-       <li class="nav-item"><a class="nav-link c-nav__item" href="contact.html">Contact</a></li>
-       <li class="nav-item ms-md-3"><a class="btn c-button c-button--primary" href="contact.html">Shop Now</a></li>
+<header class="dr-header" data-dr-variant="v1">
+  <div class="dr-header-inner">
+    <a class="dr-logo" href="./index.html" aria-label="domain">domain</a>
+
+    <nav class="dr-nav" aria-label="Primary navigation">
+      <ul class="dr-nav-list">
+        <li class="dr-nav-item"><a class="dr-nav-link" href="./index.html">Home</a></li><li class="dr-nav-item"><a class="dr-nav-link" href="./about.html">About</a></li><li class="dr-nav-item"><a class="dr-nav-link" href="./contact.html">Contact</a></li><li class="dr-nav-item"><a class="dr-nav-link" href="./services.html">Services</a></li>
       </ul>
-     </nav>
-    </div>
-   </div>
-  </header>
+    </nav>
+
+    <button class="dr-burger" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="dr-mobile-menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<nav class="dr-mobile-menu" id="dr-mobile-menu" aria-label="Mobile navigation">
+  <ul class="dr-mobile-nav-list">
+    <li class="dr-nav-item"><a class="dr-nav-link" href="./index.html">Home</a></li><li class="dr-nav-item"><a class="dr-nav-link" href="./about.html">About</a></li><li class="dr-nav-item"><a class="dr-nav-link" href="./contact.html">Contact</a></li><li class="dr-nav-item"><a class="dr-nav-link" href="./services.html">Services</a></li>
+  </ul>
+</nav>
+
   <main id="main-content" role="main">
    <section class="c-page-hero py-4 py-md-5" aria-labelledby="page-title">
     <div class="container">
@@ -98,7 +180,7 @@
           <li>Provide accurate, current, and complete information during the registration process;</li>
           <li>Maintain and promptly update your account information to keep it accurate and complete;</li>
           <li>Keep your password confidential and not share it with any third party;</li>
-          <li>Notify domain immediately at <a href="mailto:info@domain.com" class="c-legal-link">info@domain.com</a> if you suspect any unauthorised use of your account;</li>
+          <li>Notify domain immediately at <a href="mailto:service@domain.com" class="c-legal-link">service@domain.com</a> if you suspect any unauthorised use of your account;</li>
           <li>Accept full responsibility for all activities that occur under your account.</li>
          </ul>
          <p>You may not create an account on behalf of another person without their explicit consent, nor may you use another person's account. Each individual may maintain only one active account unless expressly authorised by domain in writing.</p>
@@ -123,7 +205,7 @@
          <ul class="c-legal-list">
           <li>You may return eligible items within <strong>30 days</strong> of delivery, provided they are unworn, unwashed, undamaged, and in original packaging with all tags attached;</li>
           <li>Due to hygiene regulations, certain items including underwear and swimwear cannot be returned once the hygiene seal has been removed, unless they are defective;</li>
-          <li>To initiate a return, please contact our support team at <a href="mailto:info@domain.com" class="c-legal-link">info@domain.com</a> with your order number and reason for return;</li>
+          <li>To initiate a return, please contact our support team at <a href="mailto:service@domain.com" class="c-legal-link">service@domain.com</a> with your order number and reason for return;</li>
           <li>Approved refunds will be issued to the original payment method within <strong>10 business days</strong> of receiving the returned item;</li>
           <li>Shipping costs for returns are borne by the customer unless the item is faulty or incorrectly supplied.</li>
          </ul>
@@ -182,7 +264,7 @@
          <p>You may terminate your use of the Services at any time by:</p>
          <ul class="c-legal-list">
           <li>Ceasing to access or use the Site;</li>
-          <li>Requesting the deletion of your account by contacting us at <a href="mailto:info@domain.com" class="c-legal-link">info@domain.com</a>.</li>
+          <li>Requesting the deletion of your account by contacting us at <a href="mailto:service@domain.com" class="c-legal-link">service@domain.com</a>.</li>
          </ul>
          <p>Upon your request for account deletion, domain will process your request in accordance with our <a href="privacy.html" class="c-legal-link">Privacy Policy</a> and applicable data protection regulations. Certain data may be retained for legal, regulatory, or fraud-prevention purposes even after account deletion.</p>
          <p>Sections of these Terms that by their nature should survive termination — including intellectual property, limitation of liability, and governing law provisions — will remain in full force and effect after termination.</p>
@@ -216,13 +298,13 @@
            <dd class="c-legal-contact__value">domain</dd>
            <dt class="c-legal-contact__label">Email</dt>
            <dd class="c-legal-contact__value">
-            <a href="mailto:info@domain.com" class="c-legal-link">info@domain.com</a>
+            <a href="mailto:service@domain.com" class="c-legal-link">service@domain.com</a>
            </dd>
            <dt class="c-legal-contact__label">Address</dt>
-           <dd class="c-legal-contact__value">{address}</dd>
+           <dd class="c-legal-contact__value">One Canada Square, Canary Wharf, Floor 12, Office 1603, E14 5AB London</dd>
            <dt class="c-legal-contact__label">Phone</dt>
            <dd class="c-legal-contact__value">
-            <a href="tel:{telephone}" class="c-legal-link">{telephone}</a>
+            <a href="tel:+44 20 0737402" class="c-legal-link">+44 20 0737402</a>
            </dd>
           </dl>
          </div>
@@ -234,16 +316,71 @@
     </div>
    </section>
   </main>
-  <footer class="c-testimonial-card__author mt-3">
-   <div class="d-flex align-items-center gap-3">
-    <div class="c-avatar ratio ratio-1x1">
-     <img src="img/358982.jpg" alt="Portrait of Anna, satisfied LaceLux customer" class="img-fluid object-fit-cover c-avatar__image" width="60" height="60" loading="lazy">
+  <footer class="dr-footer" aria-label="Site footer">
+  <div class="dr-footer-inner">
+    <div class="dr-footer-top">
+      <div class="dr-footer-brand-block">
+        <div class="dr-footer-logo" aria-label="domain">domain</div>
+        <p class="dr-footer-tagline">Thoughtfully crafted experiences for the modern web.</p>
+      </div>
+      <nav class="dr-footer-nav" aria-label="Main navigation">
+        <h2 class="dr-footer-heading">Explore</h2>
+        <ul class="dr-footer-nav-list">
+          <li class="dr-footer-nav-item"><a class="dr-footer-nav-link" href="./index.html">Home</a></li>
+          <li class="dr-footer-nav-item"><a class="dr-footer-nav-link" href="./about.html">About</a></li>
+          <li class="dr-footer-nav-item"><a class="dr-footer-nav-link" href="./contact.html">Contact</a></li>
+          <li class="dr-footer-nav-item"><a class="dr-footer-nav-link" href="./services.html">Services</a></li>
+        </ul>
+      </nav>
+      <nav class="dr-footer-legal" aria-label="Legal links">
+        <h2 class="dr-footer-heading">Legal</h2>
+        <ul class="dr-footer-legal-list">
+          <li class="dr-footer-legal-item"><a class="dr-footer-legal-link" href="./privacy.html">Privacy Policy</a></li>
+          <li class="dr-footer-legal-item"><a class="dr-footer-legal-link" href="./terms_of_services.html">Terms of Service</a></li>
+          <li class="dr-footer-legal-item"><a class="dr-footer-legal-link" href="./terms_and_conditions.html">Terms and Conditions</a></li>
+          <li class="dr-footer-legal-item"><a class="dr-footer-legal-link" href="./cookie_policy.html">Cookie Policy</a></li>
+          <li class="dr-footer-legal-item"><a class="dr-footer-legal-link" href="./gdpr-rights.html">GDPR Rights</a></li>
+          <li class="dr-footer-legal-item"><a class="dr-footer-legal-link" href="./impressum.html">Impressum</a></li>
+        </ul>
+      </nav>
+      <div class="dr-footer-contact" aria-label="Contact information">
+        <h2 class="dr-footer-heading">Contact</h2>
+        <ul class="dr-footer-contact-list">
+          <li class="dr-footer-contact-item">
+            <span class="dr-footer-contact-label">Address</span>
+            <span class="dr-footer-contact-value">One Canada Square, Canary Wharf, Floor 12, Office 1603, E14 5AB London</span>
+          </li>
+          <li class="dr-footer-contact-item">
+            <span class="dr-footer-contact-label">Telephone</span>
+            <a class="dr-footer-contact-link" href="tel:+44 20 0737402">+44 20 0737402</a>
+          </li>
+          <li class="dr-footer-contact-item">
+            <span class="dr-footer-contact-label">Email</span>
+            <a class="dr-footer-contact-link" href="mailto:service@domain.com">service@domain.com</a>
+          </li>
+        </ul>
+      </div>
     </div>
-    <div>
-     <strong class="c-testimonial-card__name d-block">Anna V.</strong> <span class="c-testimonial-card__location">Moscow</span>
+    <div class="dr-footer-bottom">
+      <p class="dr-footer-disclaimer">The information provided on domain and domain.com is for general informational purposes only and does not constitute professional, legal, or financial advice. All content is provided as-is without any warranties.</p>
+      <div class="dr-footer-bottom-meta">
+        <p class="dr-footer-meta"><span class="dr-year"></span> © domain. All rights reserved.</p>
+      </div>
     </div>
-   </div>
-  </footer>
-  <script src="script.js" defer=""></script>
+  </div>
+</footer>
+  
  
+  
+  
+
+<script src="script.js" defer=""></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+if (typeof AOS !== "undefined" && !window.__AOS_INITIALIZED__) {
+  AOS.init({ once: true, duration: 700, easing: "ease-out-cubic" });
+  window.__AOS_INITIALIZED__ = true;
+}
+</script>
+<script src="./header-footer.js"></script>
 </body></html>
